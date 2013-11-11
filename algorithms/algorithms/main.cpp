@@ -40,10 +40,30 @@ void insertion_sort(int unsorted[], int length)
     }
 }
 
+void selection_sort(int unsorted[], int length)
+{
+    for (int i = 0; i < length; i++) {
+        int min = INT32_MAX;
+        int min_index = -1;
+        for (int j = i; j < length; j++) {
+            if (unsorted[j] < min) {
+                min = unsorted[j];
+                min_index = j;
+            }
+        }
+        min = unsorted[min_index];
+        unsorted[min_index] = unsorted[i];
+        unsorted[i] = min;
+    }
+    
+}
+
 int main(int argc, const char * argv[])
 {
     int unsorted[10] = {9, 8 , 7 , 6, 5, 4, 3, 2, 1, 0};
-    insertion_sort(unsorted, 10);
+//    insertion_sort(unsorted, 10);
+//    selection_sort(unsorted, 10);
+    print_array(unsorted, 10);
     return 0;
 }
 
