@@ -72,17 +72,6 @@ int * merge_sort(int unsorted[], int length)
         result[0] = unsorted[0];
         return result;
     }
-    if (length == 2) {
-        int * result = new int[2];
-        if (unsorted[0] > unsorted[1]) {
-            result[0] = unsorted[1];
-            result[1] = unsorted[0];
-        } else {
-            result[0] = unsorted[0];
-            result[1] = unsorted[1];
-        }
-        return result;
-    }
     
     int dividingIndex;
     if (length % 2 == 1) {
