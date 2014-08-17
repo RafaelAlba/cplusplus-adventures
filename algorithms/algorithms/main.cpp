@@ -130,6 +130,19 @@ int * merge_sort(int unsorted[], int length)
     return sorted;
 }
 
+int * quicksort(int * unsorted, int length)
+{
+    if (length <= 1) {
+        return unsorted;
+    }
+
+    int pivotIndex, pivot;
+    int * lessThan;
+    int * greaterThan;
+    
+    return 0;
+}
+
 int main(int argc, const char * argv[])
 {
     int unsorted[10] = {9, 8 , 7 , 6, 5, 4, 3, 2, 1, 0};
